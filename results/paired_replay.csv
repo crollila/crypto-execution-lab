@@ -1,0 +1,9 @@
+product,comparison,metric,n_pairs,mean_diff,ci95,t_stat,frac_other_cheaper
+BTC-USD,hybrid - aggressive,is_bps,58,-9.53481,0.785049,-23.8052,0.965517
+BTC-USD,passive - aggressive,is_bps,58,-10.0531,0.4205,-46.8588,1
+ETH-USD,hybrid - aggressive,is_bps,58,-9.97977,0.80139,-24.408,0.965517
+ETH-USD,passive - aggressive,is_bps,58,-10.3125,0.55696,-36.2909,1
+BTC-USD,hybrid - aggressive,is_completed_bps,58,-9.53481,0.785049,-23.8051,0.965517
+BTC-USD,passive - aggressive,is_completed_bps,58,-9.89454,0.437035,-44.3747,1
+ETH-USD,hybrid - aggressive,is_completed_bps,58,-9.97977,0.80139,-24.408,0.965517
+ETH-USD,passive - aggressive,is_completed_bps,58,-10.3125,0.55696,-36.2909,1

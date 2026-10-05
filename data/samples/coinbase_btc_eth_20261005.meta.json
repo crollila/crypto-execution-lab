@@ -1,0 +1,31 @@
+{
+  "products": [
+    "BTC-USD",
+    "ETH-USD"
+  ],
+  "start_utc": 1791158850.2554145,
+  "seconds": 1800,
+  "depth": 100,
+  "snapshot_interval": 0.25,
+  "events": 23719,
+  "ws_stats": {
+    "messages": 63610,
+    "gaps": 0,
+    "reconnects": 0,
+    "crossed_skipped": 0,
+    "trades": 11884
+  },
+  "specs": {
+    "BTC-USD": {
+      "tick": 0.01,
+      "lot": 1e-08,
+      "min_notional": 1.0
+    },
+    "ETH-USD": {
+      "tick": 0.01,
+      "lot": 1e-08,
+      "min_notional": 1.0
+    }
+  },
+  "source": "Coinbase Advanced Trade public WebSocket (level2, market_trades)"
+}

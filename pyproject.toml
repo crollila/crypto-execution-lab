@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crypto-execution-lab"
+version = "0.1.0"
+description = "Coinbase public market data, execution simulation (queue/latency/fees/partial fills), and TCA. Simulation only - live trading disabled by construction."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+  "requests>=2.31",
+  "websockets>=12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.5"]
+
+[project.scripts]
+execlab = "execlab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: hits live public Coinbase endpoints (deselected by default)"]
+addopts = "-m 'not network'"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "UP007", "B905"]

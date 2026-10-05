@@ -1,0 +1,117 @@
+{
+  "BTC-USD": {
+    "stats": {
+      "product": "BTC-USD",
+      "seconds": 1799.3351011276245,
+      "snapshots": 6200,
+      "trades": 9261,
+      "mid_first": 86456.015,
+      "mid_last": 86285.275,
+      "spread_bps_median": 0.0011581726184205512,
+      "spread_bps_mean": 0.02525321752864757,
+      "spread_bps_p95": 0.18860272504152314,
+      "depth10_bid_usd_median": 1829258.263529208,
+      "depth10_ask_usd_median": 1849943.502714675,
+      "captured_width_bps_median": 7.467348906868001,
+      "levels_per_bp_median": 12.895047159884697,
+      "usd_per_level_median": 18251.57088507733,
+      "sigma_bps_sqrt_s": 0.5742743053728242,
+      "trades_per_s": 5.146901204892979,
+      "trade_usd_median": 9.6526249295,
+      "trade_usd_log_sd": 5.109458473481972,
+      "volume_usd_per_min": 279038.48428882926,
+      "aggressor_quote_rule_agreement": 0.9552915766738661
+    },
+    "base_regime": {
+      "name": "base",
+      "sigma_bps_sqrt_s": 0.5742743053728242,
+      "jump_rate_per_min": 0.0,
+      "jump_bps": 0.0,
+      "half_spread_bps": 0.0005794731488078355,
+      "level_spacing_bps": 0.0775491541520614,
+      "n_levels": 150,
+      "level_usd": 18251.57088507733,
+      "depth_slope": 0.01,
+      "refill_per_s": 4.0,
+      "cancel_per_s": 0.15,
+      "size_vol": 0.25,
+      "pickoff_frac": 0.0010432557561910177,
+      "noise_trades_per_s": 3.7907619381799247,
+      "noise_trade_usd": 9.6526249295,
+      "noise_trade_sigma": 3.0130169956432047
+    }
+  },
+  "ETH-USD": {
+    "stats": {
+      "product": "ETH-USD",
+      "seconds": 1799.2081699371338,
+      "snapshots": 5635,
+      "trades": 2623,
+      "mid_first": 2724.17,
+      "mid_last": 2719.045,
+      "spread_bps_median": 0.07336245822918364,
+      "spread_bps_mean": 0.23037855544994204,
+      "spread_bps_p95": 0.7708481387759246,
+      "depth10_bid_usd_median": 1055739.6635602226,
+      "depth10_ask_usd_median": 1011147.2153873434,
+      "captured_width_bps_median": 10.0,
+      "levels_per_bp_median": 9.60332818854,
+      "usd_per_level_median": 10819.960339000449,
+      "sigma_bps_sqrt_s": 0.6797168266107024,
+      "trades_per_s": 1.4578635445456267,
+      "trade_usd_median": 142.2378554847,
+      "trade_usd_log_sd": 3.479048505390116,
+      "volume_usd_per_min": 88741.6928831874,
+      "aggressor_quote_rule_agreement": 0.9420345489443378
+    },
+    "base_regime": {
+      "name": "base",
+      "sigma_bps_sqrt_s": 0.6797168266107024,
+      "jump_rate_per_min": 0.0,
+      "jump_bps": 0.0,
+      "half_spread_bps": 0.03668122911459182,
+      "level_spacing_bps": 0.10413056602536361,
+      "n_levels": 144,
+      "level_usd": 10819.960339000449,
+      "depth_slope": 0.01,
+      "refill_per_s": 4.0,
+      "cancel_per_s": 0.15,
+      "size_vol": 0.25,
+      "pickoff_frac": 0.0018132904141021215,
+      "noise_trades_per_s": 1.043157814898301,
+      "noise_trade_usd": 142.2378554847,
+      "noise_trade_sigma": 1.9822551834439526
+    }
+  },
+  "capture_meta": {
+    "products": [
+      "BTC-USD",
+      "ETH-USD"
+    ],
+    "start_utc": 1791158850.2554145,
+    "seconds": 1800,
+    "depth": 100,
+    "snapshot_interval": 0.25,
+    "events": 23719,
+    "ws_stats": {
+      "messages": 63610,
+      "gaps": 0,
+      "reconnects": 0,
+      "crossed_skipped": 0,
+      "trades": 11884
+    },
+    "specs": {
+      "BTC-USD": {
+        "tick": 0.01,
+        "lot": 1e-08,
+        "min_notional": 1.0
+      },
+      "ETH-USD": {
+        "tick": 0.01,
+        "lot": 1e-08,
+        "min_notional": 1.0
+      }
+    },
+    "source": "Coinbase Advanced Trade public WebSocket (level2, market_trades)"
+  }
+}

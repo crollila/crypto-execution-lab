@@ -1,0 +1,11 @@
+{
+  "n_runs": {
+    "regime_grid": 4800,
+    "size_sweep": 1600,
+    "latency_outage": 2160,
+    "replay": 348,
+    "replay_fillmodel": 232
+  },
+  "quick": false,
+  "workers": 8
+}

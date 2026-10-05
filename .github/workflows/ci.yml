@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: ruff check src tests
+      - name: Unit tests (offline; network tests deselected)
+        run: pytest -q
+      - name: Quick end-to-end reproduction from the committed capture
+        run: python -m execlab reproduce --quick --out /tmp/results --figures /tmp/figures --workers 2
+      - name: Check quick reproduction is deterministic
+        run: |
+          python -m execlab reproduce --quick --out /tmp/results2 --figures /tmp/figures2 --workers 2
+          for f in /tmp/results/*.csv; do cmp "$f" "/tmp/results2/$(basename "$f")"; done
