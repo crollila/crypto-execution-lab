@@ -79,7 +79,7 @@ def parse_ts(s: str) -> float:
     s = s.rstrip("Z")
     if "." in s:
         head, frac = s.split(".", 1)
-        s = f"{head}.{frac[:6]}"
+        s = f"{head}.{frac[:6].ljust(6, '0')}"  # py3.10 needs exactly 6 digits
     return datetime.fromisoformat(s + "+00:00").timestamp()
 
 
